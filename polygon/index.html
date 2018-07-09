@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript">
+			;
+			(function(win) {
+				function resize() {
+					document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + "px";
+				}
+				var b = null;
+				win.addEventListener("resize", function() {
+					clearTimeout(b), b = setTimeout(resize, 300)
+				}, !1);
+				resize();
+			})(window);
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<style type="text/css">
+			.block {
+				height: 3rem;
+				background-color: linen;
+				margin-bottom: 0.266666rem;
+			}
+			
+			.triangle {
+				width: 0;
+				height: 0;
+				border-bottom: 87px solid salmon;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+			}
+			
+			.star-six {
+				position: relative;
+				width: 0;
+				height: 0;
+				border-bottom: 70px solid salmon;
+				border-left: 40px solid transparent;
+				border-right: 40px solid transparent;
+			}
+			
+			.star-six:after {
+				display: block;
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 70px solid salmon;
+				border-left: 40px solid transparent;
+				border-right: 40px solid transparent;
+				position: absolute;
+				left: -40px;
+				top: 24px;
+			}
+			
+			.star-five {
+				display: block;
+				width: 0;
+				height: 0;
+				position: relative;
+				border-bottom: 40px solid salmon;
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				left: 30px;
+			}
+			
+			.star-five:before {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-bottom: 35px solid salmon;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				transform: rotateZ(35deg);
+				top: 36px;
+				left: -45px;
+			}
+			
+			.star-five:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 0;
+				border-bottom: 35px solid salmon;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				transform: rotateZ(-35deg);
+				top: 36px;
+				left: -52px;
+			}
+			
+			.pentagon {
+				width: 0;
+				height: 0;
+				position: relative;
+				border-bottom: 35px solid salmon;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+			}
+			
+			.pentagon:after {
+				content: "";
+				display: block;
+				width: 100px;
+				box-sizing: border-box;
+				position: absolute;
+				left: -50px;
+				top: 35px;
+				border-top: 60px solid salmon;
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+			}
+			
+			.heart {
+				position: relative;
+				width: 100px;
+				height: 90px;
+			}
+			
+			.heart:before,
+			.heart:after {
+				position: absolute;
+				content: '';
+				width: 50px;
+				height: 80px;
+				left: 50px;
+				border-radius: 50px 50px 0 0;
+				background-color: salmon;
+				transform: rotateZ(-45deg);
+				transform-origin: 0 bottom;
+			}
+			
+			.heart:after {
+				left: 0;
+				transform: rotateZ(45deg);
+				transform-origin: right bottom;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="block">
+			<div class="triangle"></div>
+		</div>
+		<div class="block">
+			<div class="star-six"></div>
+		</div>
+		<div class="block">
+			<div class="star-five"></div>
+		</div>
+		<div class="block">
+			<div class="pentagon"></div>
+		</div>
+		<div class="block">
+			<div class="heart"></div>
+		</div>
+	</body>
+
+</html>
